@@ -1,0 +1,50 @@
+CREATE TABLE Student(
+	id INTEGER,
+	FirstName varchar(100),
+	LastName varchar(100),
+	DateOfBirsth INTEGER,
+	EnrolledDate varchar(10),
+	Gender varchar(10),
+	NationalIDNumber INTEGER,
+	StudentCardNuber INTEGER
+);
+CREATE TABLE Teacer(
+	id INTEGER,
+	FirstName varchar(100),
+	LastName varchar(100),
+	DateOfBirsth INTEGER,
+	AcademicTank varchar(100),
+	HireDate INTEGER
+);
+CREATE TABLE GradeDetails(
+	id INTEGER,
+	GardeID INTEGER,
+	AchievementTypeID INTEGER,
+	AchievementPoints INTEGER,
+	AchievementMaxPoints INTEGER,
+	AchievementDate INTEGER
+);
+CREATE TABLE Course(
+	id INTEGER,
+	Name varchar(100),
+	Credit varchar(100),
+	AcademicYear INTEGER,
+	Semester INTEGER
+);
+SELECT Credit Semester FROM Course;
+CREATE TABLE Grade(
+	id INTEGER,
+	StudentID varchar(100),
+	CourseID varchar(100),
+	TeacherID INTEGER,
+	Grade INTEGER,
+	Comment varchar(300),
+	CreateDate INTEGER
+);
+CREATE TABLE AchievementType(
+	id INTEGER,
+	Name varchar(100),
+	Description varchar(500),
+	ParticipationRate INTEGER
+);
+SELECT * FROM AchievementType;
