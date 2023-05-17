@@ -1,0 +1,58 @@
+-- 1/6
+SELECT *
+FROM employee
+WHERE firstname = 'Ana'
+
+SELECT *
+FROM employee
+WHERE dateofbirth > '01.01.1979';
+
+SELECT *
+FROM employee
+WHERE gender = 'M';
+
+SELECT *
+FROM employee
+WHERE lastname LIKE 'T%';
+
+SELECT *
+FROM employee
+WHERE hiredate = '1988-01-01';
+
+SELECT *
+FROM employee
+WHERE lastname LIKE 'S%'
+and hiredate = '1988-01-01';
+
+--2/6
+SELECT *
+FROM employee
+WHERE firstname = 'Antonio'
+ORDER BY lastname ASC;
+
+SELECT * 
+FROM employee
+ORDER BY firstname ASC
+
+SELECT * 
+FROM employee
+ORDER BY hiredate DESC
+
+--3/6
+SELECT region 
+FROM businessentity
+UNION ALL
+SELECT regionname
+FROM customer;
+
+SELECT region 
+FROM businessentity
+UNION
+SELECT regionname
+FROM customer;
+
+SELECT region 
+FROM businessentity
+INTERSECT
+SELECT regionname
+FROM customer;
